@@ -11,13 +11,13 @@ A personal exam-prep app for one grade 8 student. Android first, Hebrew and Engl
 
 pnpm workspaces, TypeScript everywhere:
 
-| Path                    | What it is                                          |
-| ----------------------- | --------------------------------------------------- |
-| `apps/mobile`           | React Native + Expo app (Android)                   |
-| `apps/server`           | Fastify API with Postgres                           |
+| Path                    | What it is                                               |
+| ----------------------- | -------------------------------------------------------- |
+| `apps/mobile`           | React Native + Expo app (Android)                        |
+| `apps/server`           | Fastify API with Postgres                                |
 | `packages/core`         | Domain logic as pure functions (FSRS, queue, streak, XP) |
-| `packages/api-contract` | OpenAPI spec and generated types                    |
-| `e2e/`                  | Maestro end-to-end flows, run in English and Hebrew |
+| `packages/api-contract` | OpenAPI spec and generated types                         |
+| `e2e/`                  | Maestro end-to-end flows, run in English and Hebrew      |
 
 These are added during M0; until then the workspace is empty.
 
@@ -48,7 +48,7 @@ pnpm typecheck
 pnpm test
 ```
 
-Each script runs across all workspaces.
+Each script runs across all workspaces. `typecheck` and `test` first check that every workspace package defines both scripts, so no package can skip them.
 
 ## Contributing
 

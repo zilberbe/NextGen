@@ -1,9 +1,13 @@
 # Dependencies
 node_modules/
 
-# Build output
-dist/
-build/
+# Build output (scoped, so a source folder named build or dist is not hidden)
+/apps/*/dist/
+/apps/*/build/
+/packages/*/dist/
+/packages/*/build/
+**/android/build/
+**/android/app/build/
 *.tsbuildinfo
 
 # Expo / React Native
@@ -24,7 +28,6 @@ local.properties
 # Test and E2E output
 coverage/
 e2e/.output/
-.maestro/
 *.log
 
 # Environment and secrets (only .env.example is committed)
