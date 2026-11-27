@@ -1,0 +1,37 @@
+version: 2
+updates:
+  # npm packages for the whole pnpm workspace (reads pnpm-lock.yaml at the root)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "tech"
+    ignore:
+      # Expo SDK upgrades are done by hand with `npx expo install --fix`
+      - dependency-name: "expo"
+        update-types: ["version-update:semver-major"]
+    groups:
+      # Expo pins compatible versions, so update these together
+      expo:
+        patterns:
+          - "expo"
+          - "expo-*"
+          - "@expo/*"
+          - "react-native"
+          - "react-native-*"
+          - "@react-native/*"
+          - "react"
+          - "react-dom"
+      dev-tools:
+        dependency-type: "development"
+        update-types: ["minor", "patch"]
+
+  # GitHub Actions used by CI workflows
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "tech"
