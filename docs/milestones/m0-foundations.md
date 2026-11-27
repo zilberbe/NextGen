@@ -10,7 +10,7 @@ Set up the repository, tooling and pipelines so that every later milestone start
 
 ## Prerequisites (dev machine)
 
-- [ ] Node 24 LTS installed (replaces Node 16); `corepack enable` so pnpm comes from the `packageManager` field
+- [x] Node 26 LTS installed (replaces Node 16) and pnpm installed globally; pnpm switches itself to the version in the `packageManager` field
 - [ ] Android Studio with an Android SDK, an emulator image (API 34, x86_64) and JDK 17
 - [ ] Maestro CLI installed and running against the local emulator
 - [ ] Docker for a local Postgres (optional)
@@ -21,12 +21,12 @@ Each section below is roughly one pull request, in the suggested order. Each one
 
 ### 1. Monorepo skeleton
 
-- [ ] Root `package.json` with `packageManager` pinned to a pnpm version, `engines.node` set to `>=24`
-- [ ] `pnpm-workspace.yaml` listing `apps/*` and `packages/*`
-- [ ] `.nvmrc` / `.node-version` set to 24
-- [ ] `.gitignore`, `.gitattributes` (LF line endings, since the repo is edited on Windows), `.editorconfig`
-- [ ] Root scripts: `lint`, `format`, `format:check`, `typecheck`, `test`, which run across all workspaces
-- [ ] Short `README.md`: what the project is, prerequisites, how to install, run and test
+- [x] Root `package.json` with `packageManager` pinned to a pnpm version, `engines.node` set to `>=26`
+- [x] `pnpm-workspace.yaml` listing `apps/*` and `packages/*`
+- [x] `.nvmrc` set to 26 (read by nvm and `actions/setup-node`, so no separate `.node-version`)
+- [x] `.gitignore`, `.gitattributes` (LF line endings, since the repo is edited on Windows), `.editorconfig`
+- [x] Root scripts: `lint`, `format`, `format:check`, `typecheck`, `test`, which run across all workspaces
+- [x] Short `README.md`: what the project is, prerequisites, how to install, run and test
 
 **Acceptance:** `pnpm install` and `pnpm typecheck` succeed from a clean clone.
 

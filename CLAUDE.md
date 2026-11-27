@@ -42,8 +42,8 @@ TypeScript everywhere. pnpm workspaces: `apps/mobile` (React Native + Expo), `ap
 
 Fill in during M0 scaffolding and keep current whenever commands change.
 
-- Install: TBD
+- Install: `pnpm install` (Node 26, pnpm pinned in `packageManager`)
 - Run app (Android emulator/device): TBD
 - Run server: TBD
-- Run tests: TBD
-- Lint/format: TBD
+- Run tests: `pnpm test` (all workspaces); `pnpm typecheck`
+- Lint/format: `pnpm lint`, `pnpm format`, `pnpm format:check`

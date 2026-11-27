@@ -97,7 +97,7 @@ Phase 2 and 3 features from the spec are out of scope until M7 is done.
 
 ## Prerequisites on the dev machine
 
-- Node 24 LTS (the machine currently has Node 16, which current Expo does not support) and pnpm via `corepack enable`
+- Node 26 LTS and pnpm (`npm install -g pnpm`; it switches itself to the version pinned in `packageManager`). Node 25 and later no longer bundle corepack.
 - Android Studio with an Android SDK and an emulator image, plus JDK 17
 - Maestro CLI for running E2E locally (CI runs it regardless)
 - Docker (optional) for a local Postgres; CI provides its own
