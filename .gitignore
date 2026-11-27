@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Expo / React Native
+.expo/
+web-build/
+*.apk
+*.aab
+*.jks
+*.keystore
+!debug.keystore
+
+# Android / Gradle
+.gradle/
+local.properties
+.cxx/
+.externalNativeBuild/
+
+# Test and E2E output
+coverage/
+e2e/.output/
+.maestro/
+*.log
+
+# Environment and secrets (only .env.example is committed)
+.env
+.env.*
+!.env.example
+
+# Editors and OS
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude Code local settings
+.claude/settings.local.json
